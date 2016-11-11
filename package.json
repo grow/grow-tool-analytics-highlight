@@ -1,0 +1,12 @@
+{
+  "name": "grow-tool-analytics-highlight",
+  "version": "0.0.1",
+  "description": "Grow UI tool for highlighting data attribute based analytics.",
+  "main": "tool.js",
+  "repository": {
+    "url": "https://github.com/grow/grow-tool-analytics-highlight.git",
+    "type": "git"
+  },
+  "author": "Randy Merrill <randy@blinkk.com>",
+  "license": "MIT"
+}
