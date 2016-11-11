@@ -7,17 +7,18 @@
   var hasInitialized = false;
   var isActive = false;
   var options = {
-    keys: ['ga-event', 'ga-label', 'ga-action'],
-    regex: '^ga[A-Z].*',
-    trigger: 'ga-event'
+    keys: ['event', 'label', 'action'],
+    prefix: 'ga',
+    regex: null,
+    trigger: 'event'
   };
 
   var formatAsAttr = function(key) {
-    return 'data-' + key;
+    return 'data-' + options.prefix + '-' + key;
   };
 
   var formatAsData = function(key) {
-    return key.replace(/-(.)/g, function (_, first) {
+    return (options.prefix + '-' + key).replace(/-(.)/g, function (_, first) {
       return first.toUpperCase();
     });
   };
@@ -110,7 +111,7 @@
 
       options[prop] = config[prop];
     }
-    options.regex = new RegExp(options.regex);
+    options.regex = new RegExp(options.regex || '^' + options.prefix + '[A-Z].*');
 
     // Add styling using the trigger.
     var css = document.createElement('style');
