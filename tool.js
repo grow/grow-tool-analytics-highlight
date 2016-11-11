@@ -122,7 +122,7 @@
   }
 
   grow.ui.tools.push({
-    'kind': 'analytics_highlight',
+    'kind': 'analytics-highlight',
     'name': 'Analytics Highlight',
     'button': {
       'events': {
