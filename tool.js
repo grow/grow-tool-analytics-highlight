@@ -7,9 +7,9 @@
   var hasInitialized = false;
   var isActive = false;
   var options = {
-    keys: ['g-event', 'g-label', 'g-action'],
-    regex: '^g[A-Z].*',
-    trigger: 'g-event'
+    keys: ['ga-event', 'ga-label', 'ga-action'],
+    regex: '^ga[A-Z].*',
+    trigger: 'ga-event'
   };
 
   var formatAsAttr = function(key) {
